@@ -1,0 +1,87 @@
+$theme-color: #0838B0;
+$sub-color-1: #F7670A;
+$sub-color-2: #EB3239;
+$grey: #E4E6EB;
+$light-grey: rgb(230, 235, 241);
+$font: "Franklin Gothic", serif;
+
+@mixin scrollbarY(){
+  &::-webkit-scrollbar {
+    background-color: transparent;
+    width: 0;
+  }
+
+  &:hover {
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(0,0,0,.2)
+    }
+  }
+}
+
+.sidebar-list {
+  @include scrollbarY
+}
+
+.scrolling-wrapper::-webkit-scrollbar-thumb:hover,
+{
+  background-color: rgb(121, 127, 138) !important;
+}
+
+.scrolling-wrapper{
+  &::-webkit-scrollbar
+  {
+    height: 12px;
+    background-color: #F5F5F5;
+  }
+
+  &::-webkit-scrollbar-thumb
+  {
+    border-radius: 10px ;
+    background-color: rgb(161, 164, 169) !important;
+  }
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1.8;
+  font-weight: normal;
+  overflow: hidden;
+}
+
+body.dashboard {
+  background-color: #E8ECEF;
+  position: fixed;
+}
+
+@mixin icon($url) {
+  max-width: 20px;
+  bottom: -5px;
+  position: relative;
+  content: url($url);
+}
+
+span.ic-dashboard {
+  @include icon("../images/icon/dashboard.png")
+}
+
+span.ic-perpus {
+  @include icon("../images/icon/perpustakaan.png")
+}
+
+span.ic-kuliah {
+  @include icon("../images/icon/kuliah.png")
+}
+
+span.ic-info {
+  @include icon("../images/icon/information.png")
+}
+
+span.ic-himpunan {
+  @include icon("../images/icon/hmte.png")
+}
+
+
+
