@@ -9,8 +9,8 @@
             <div class="modal-body">
                 {{--$matkul ngambil dari kontroler [MatkulController] --}}
                 <h4>{{ $matkul->name }}</h4>
-                <h4>SKS: {{ $matkul->sks }}</h4>
-                <h4>Semester: <a href="/kurikulum?semester={{ $matkul->semester->semester }}">{{ $matkul->semester->semester }}</a></h4>
+                <h5>SKS: {{ $matkul->sks }}</h5>
+                <h5>Semester: <a href="/kurikulum?semester={{ $matkul->semester->semester }}">{{ $matkul->semester->semester }}</a></h5>
 
                 @foreach($matkul->dosen as $i => $dosen)
                     @php
@@ -25,7 +25,7 @@
                     @endif
                 @endforeach
                 <div class="mt-3">
-                    <span>Terkait:</span>
+                    <span>Lihat: </span>
                     <div class="btn-group" role="group" aria-label="Basic example">
                         <button type="button" class="btn btn-primary">Materi</button>
                         <button type="button" class="btn btn-primary">Ebook</button>
