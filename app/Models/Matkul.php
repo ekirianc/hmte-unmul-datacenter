@@ -13,18 +13,19 @@ class Matkul extends Model
         'id',
     ];
 
-    /*relasi ke tabel matkul ke semester, diapanggil di route*/
-    public function semester()
+    public function scopeFilter($query, array $filters)
     {
-        // one to one, satu matkul cuma bisa satu semester
-        return $this->belongsTo(Semester::class);
+        $user_semester = auth()->user()->semester;
+        if (isset($filters['semester'])){
+            $query->when($filters['semester'] ?? false, function ($query, $semester){
+                return $query->where('semester', '=', $semester);
+            });
+        }else{
+            return $query->where('semester', '=', $user_semester);
+        }
     }
 
-    public function day()
-    {
-        return $this->belongsTo(Day::class);
-    }
-
+    /*Many to Many*/
     public function dosen()
     {
         return $this->belongsToMany(Dosen::class);

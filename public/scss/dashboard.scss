@@ -326,6 +326,11 @@ a[data-bs-toggle="collapse"] {
     min-width: 260px;
   }
 
+  .hari:first-child{
+    display: inline-block !important;
+    //background-color: red !important;
+  }
+
   .col-3>a{
     color: #201f1f;
   }

@@ -15,12 +15,14 @@ return new class extends Migration
     {
         Schema::create('matkuls', function (Blueprint $table) {
             $table->increments('id');
-            $table->foreignId('semester_id');
-            $table->foreignId('day_id');
             $table->string('name');
             $table->string('slug')->unique();
             $table->tinyInteger('sks');
+            $table->tinyInteger('semester');
+
+            /*Jadwal*/
             $table->string('ruang');
+            $table->tinyInteger('day'); //Senin->1, Selasa->2 ....
             $table->time('waktu_mulai');
             $table->time('waktu_selesai');
 

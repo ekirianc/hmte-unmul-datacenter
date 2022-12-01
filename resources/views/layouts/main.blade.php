@@ -54,7 +54,7 @@
                 return {
                     confirm:0,
                     hide: 1,
-                    semester: {{auth()->user()->semester->semester}}
+                    semester: {{auth()->user()->semester}}
                 }
             }
         }).mount('#app')

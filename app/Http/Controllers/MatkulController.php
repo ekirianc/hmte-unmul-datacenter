@@ -9,15 +9,17 @@ class MatkulController extends Controller
 {
     // Route: /kurikulum
     public function show_all(){
-        $matkuls = Semester::with('matkul');
+        $matkuls = Matkul::select()->get()->groupBy('semester');
 
-        if (request('semester')){
-            $matkuls->where('semester', '=', request('semester'));
-        }
+//        $kurikulum = Matkul::all();
+//        if (request('semester')){
+//            $matkuls = $kurikulum;
+//            $matkuls->where('semester', '=', request('semester'));
+//        }
 
         return view('matkul_list',[
             'title' => "Kurikulum",
-            'semesters' => $matkuls->get(),
+            'matkuls' => $matkuls,
         ]);
     }
 

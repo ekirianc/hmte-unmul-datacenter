@@ -2,9 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Day;
 use App\Models\Matkul;
-use App\Models\Semester;
 use Illuminate\Support\Facades\Route;
 
 class JadwalController extends Controller
@@ -22,15 +20,13 @@ class JadwalController extends Controller
             $view = 'jadwal';
         }
 
-        $user_semester = auth()->user()->semester->semester;
         return view($view,[
             "title" => $title,
-            "day" => Day::all(),
-            'semesters' => Semester::latest()
-                ->filter(request(['semester']))->get(),
-            /*"hide" => 0,
-            "show" => 1,
-            "initial" => 1,*/
+            /*'semesters' => Semester::latest()
+                ->filter(request(['semester']))->get(),*/
+            "jadwals" => Matkul::select()->filter(request(['semester']))
+                ->orderBy('day')->get()->groupBy('day')
+
         ]);
     }
 }

@@ -22,6 +22,7 @@ class User extends Authenticatable
         'nim',
         'password',
         'angkatan',
+        'semester'
     ];
 
     /**
@@ -41,9 +42,4 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-
-    public function semester()
-    {
-        return $this->belongsTo(Semester::class);
-    }
 }

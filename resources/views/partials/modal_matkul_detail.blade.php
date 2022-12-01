@@ -1,5 +1,5 @@
 <!-- Modal -->
-<div class="modal fade" id="detail-matkul-{{$matkul->slug}}" tabindex="-1" aria-hidden="true">
+<div class="modal fade" id="detail-matkul-{{$mk->slug}}" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
@@ -8,11 +8,11 @@
             </div>
             <div class="modal-body">
                 {{--$matkul ngambil dari kontroler [MatkulController] --}}
-                <h4>{{ $matkul->name }}</h4>
-                <h5>SKS: {{ $matkul->sks }}</h5>
-                <h5>Semester: <a href="/kurikulum?semester={{ $matkul->semester->semester }}">{{ $matkul->semester->semester }}</a></h5>
+                <h4>{{ $mk->name }}</h4>
+                <h5>SKS: {{ $mk->sks }}</h5>
+                <h5>Semester: <a href="/kurikulum?semester={{ $mk->semester }}">{{ $mk->semester }}</a></h5>
 
-                @foreach($matkul->dosen as $i => $dosen)
+                @foreach($mk->dosen as $i => $dosen)
                     @php
                         $word = array('pertama', 'kedua');
                     @endphp
