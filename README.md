@@ -8,5 +8,5 @@ Pusat informasi mengenai Himpunan Mahasiswa Teknik Elekto Universitas Mulawarman
 ### login page
 ![alt text](https://i.postimg.cc/JhK4SqKY/Login.png)
 
-### Dashboard
-![alt text](https://i.postimg.cc/fw73x779/Dashboard.png)
+### Dashboard (updated Dec 4th 2022)
+![alt text](https://i.postimg.cc/zvdL9pb2/Dashboard.png)

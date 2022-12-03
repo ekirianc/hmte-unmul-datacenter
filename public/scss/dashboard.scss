@@ -28,33 +28,6 @@ a {
   }
 }
 
-.sidebar-header {
-  min-height: 19.5vh;
-  border-bottom: 1px #CECECE solid;
-
-  a {
-    display: block;
-    color: black;
-    border-radius: 50px;
-  }
-
-  a > img {
-    height: 40px;
-    width: 40px;
-    border-radius: 100%;
-  }
-
-  a:hover {
-    background-color: #e7eaee;
-  }
-
-  .profile-setting-icon {
-    float: right;
-    padding-right: 1.5rem;
-    color: #555555;
-  }
-}
-
 .bg-accent-1 {
   background-color: rgba(247, 103, 10, 0.2);
   color: rgba(0, 0, 0, 0.79);
@@ -75,11 +48,12 @@ h1, h2, h3, h4, h5,
 }
 
 #sidebar {
+  z-index: 3;
   min-width: 320px;
   max-width: 320px;
   max-height: 100vh;
   /*overflow: hidden;*/
-  background: #ffffff;
+  background: #F5F7FA;
   color: #000;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
@@ -90,16 +64,16 @@ h1, h2, h3, h4, h5,
     color: #000;
   }
 
-  &.active {
-    margin-left: -320px;
-  }
-
   h1 {
     color: #000;
     margin-bottom: 15px;
     font-weight: 700;
     font-size: 25px;
     //line-height: 0px;
+  }
+
+  &.active {
+    margin-left: -320px;
   }
 
   .components {
@@ -159,54 +133,6 @@ h1, h2, h3, h4, h5,
     font-weight: 600;
   }
 
-  .custom-menu {
-    display: inline-block;
-    position: absolute;
-    top: 20px;
-    right: 0;
-    margin-right: -20px;
-    -webkit-transition: 0.3s;
-    -o-transition: 0.3s;
-    transition: 0.3s;
-  }
-
-  .custom-menu .btn {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    position: relative;
-  }
-
-  .custom-menu .btn i {
-    margin-right: -40px;
-    font-size: 14px;
-  }
-
-  .custom-menu .btn.btn-primary {
-    background: transparent;
-    border-color: transparent;
-  }
-
-  .custom-menu .btn.btn-primary:after {
-    z-index: -1;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    content: '';
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-    background: #3445b4;
-    border-radius: 10px;
-  }
-
-  .custom-menu .btn.btn-primary:hover, #sidebar .custom-menu .btn.btn-primary:focus {
-    background: transparent !important;
-    border-color: transparent !important;
-  }
-
   .dropdown-toggle::after {
     display: block;
     position: absolute;
@@ -248,12 +174,13 @@ a[data-bs-toggle="collapse"] {
 
 .sidebar-list {
   overflow-y: scroll;
-  height: 80vh;
-  background: url("../images/Rectangle 102.png") no-repeat;
-  background-size: contain;
+  height: 95vh;
   &:after {
     content: ".";
     color: white;
+  }
+  i{
+    margin-right: 20px;
   }
 }
 
@@ -274,7 +201,7 @@ a[data-bs-toggle="collapse"] {
 
 @media (min-width: 768px){
   .content{
-    padding: 40px 100px;
+    padding: 40px 50px;
   }
 }
 
@@ -285,46 +212,76 @@ a[data-bs-toggle="collapse"] {
 
 .jadwal-kuliah {
   max-width: 100%;
+  //overflow: hidden;
+  background-color: #F5F7FA;
 }
 
-.header {
-  border-bottom: 1px rgb(183, 184, 194) solid;
-  margin-bottom: 1rem;
+.header{
+  border-radius: 10px 10px 0 0;
+  .btn{
+    background-color: #F3F5F8;
+    mix-blend-mode: multiply !important;
+  }
+  h3{
+    font-size: 1.4rem;
+  }
 }
 
-.jadwal-kuliah .btn-edit {
-  background-color: #D9D9D9;
+.jadwal-header {
+  background-color: #EDEDEE;
+}
+
+.materi-header{
+  background-color: #D7EAEA;
+}
+
+.ebook-header{
+  background-color: #D2DAFF;
 }
 
 .scrolling-wrapper {
   overflow-x: scroll;
-  //max-width: 100%;
 }
 
 .jk-content {
+  max-width: 100%;
+  margin: 0;
+  .d-flex, .flex-nowrap{
+    padding: 0;
+  }
+  .flex-nowrap:after{
+    content: "\00a0";
+  }
   .flex-row{
     width: 0;
   }
   .hari {
     font-size: 1rem;
     box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    background-color: #173B68;
   }
 
   .card {
     min-width: 260px;
     box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
     transition: 100ms;
+    outline: 1px rgba(199, 202, 206, 0.88) solid;
   }
   .card:hover{
     //box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
     box-shadow: none;
     transition: 100ms;
+    outline: none;
   }
 
   .col-3 {
     margin-right: .6rem;
     min-width: 260px;
   }
+
+  //.col-3:last-child {
+  //  margin-right: 200px;
+  //}
 
   .hari:first-child{
     display: inline-block !important;
@@ -342,6 +299,8 @@ a[data-bs-toggle="collapse"] {
   .info-badge span {
     font-size: .9rem;
     font-weight: 600;
+    background-color: #EEEDED;
+    color: #191B20;
   }
 
   .dosen-matkul a {
@@ -349,10 +308,11 @@ a[data-bs-toggle="collapse"] {
   }
 }
 
-.content-materi {
+.content-materi.dashboard {
   max-height: 300px;
   overflow-y: scroll;
-  @include s.scrollbarY
+  @include s.scrollbarY;
+  background-color: #EBF6F6;
 }
 
 .ebook .input-group {
@@ -365,41 +325,49 @@ a[data-bs-toggle="collapse"] {
   margin-right: 1rem !important;
 }
 
-.matkul-box{
-  transition: 1000ms;
-  position: relative;
-  background: #fff;
-
-  /*The background extends to the outside edge of the padding. No background is drawn beneath the border.*/
-  background-clip: padding-box;
-
-  //border: solid 8px transparent;
-  //border-radius: 0.8rem;
-
-  &:hover::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-    margin: -3px; /* same as border width */
-    border-radius: inherit; /* inherit container box's radius */
-    background: linear-gradient( 109.6deg, rgba(156,252,248,1) 11.2%, rgba(110,123,251,1) 91.1% );
-    transition: 1000ms;
+.topBottom-leftRightCorner{
+  &:before{
+    border-top: 2px solid Tomato;
   }
-  &:hover{
-    cursor: pointer;
-    //background-color: rgb(242, 247, 251);
-    transition: 1000ms;
+  &:after{
+    border-bottom: 2px solid DodgerBlue;
+  }
+  & .ui-border-element:before{
+    border-left: 2px solid #FBBC05;
+  }
+
+  & .ui-border-element:after{
+    border-right: 2px solid MediumSeaGreen;
+  }
+}
+
+.content-ebook{
+  &.dashboard{
+    background-color: #EEF1FF;
+    max-height: 400px;
+    overflow-y: scroll;
+    @include s.scrollbarY;
+  }
+  .card-footer{
+    background-color: #D2DAFF;
+    padding: 5px 15px;
+    border: none;
+    overflow-x: scroll;
+  }
+  .card-footer .d-flex{
+    width: 0;
+  }
+  .badge{
+    background-color: white;
+    color: #173B68;
+    font-size: .9rem;
   }
 }
 
 .content-materi .button,
 .content-ebook .button,
 {
-  width: 120px;
+  width: 60px;
   margin-right: 0;
 
   .btn {

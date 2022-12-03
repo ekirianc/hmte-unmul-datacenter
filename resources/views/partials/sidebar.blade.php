@@ -1,44 +1,14 @@
 <!-- sidebar -->
 <nav id="sidebar">
-    <!-- sidebar toogle button -->
-    <div class="custom-menu">
-        <button type="button" id="sidebarCollapse" class="btn btn-primary">
-            <i class="fa fa-bars"></i>
-            <span class="sr-only">Toggle Menu</span>
-        </button>
-    </div>
     <!-- sidebar content -->
     <div class="components h-100">
         <ul class="list-unstyled mb-5 h-100">
             <!-- sidebar header, fixed -->
-            <div class="sidebar-header p-4">
-                <h1 class="text-center logo">
+            <div class="sidebar-header p-3">
+                <h1 class="text-center logo m-0">
                     <span class="badge" style="background-color: #0838B0 !important; color: #fff">HMTE</span> Data
                     Center
                 </h1>
-                <!-- profile pict and name -->
-                <div class="ps-3">
-                    <a href="#exampleModal" class="p-2 position-relative" data-bs-toggle="modal">
-                        <img src="/images/edna.jpg" alt="">
-                        <span class="ms-3">
-                            <?php $username = auth()->user()->name?>
-
-                            @if(str_contains($username, 'Muhammad'))
-                                M. {{ substr($username, 9, 20) }}
-                                @if(strlen(substr($username, 9, 25))>=15)
-                                    ...
-                                @endif
-                            @else
-                                {{ substr($username, 0, 15) }}
-                                @if(strlen(substr($username, 0, 15))>=15)
-                                    ...
-                                @endif
-                            @endif
-                        </span>
-                        <span class="fa-sharp fa-solid fa-gear profile-setting-icon position-absolute top-50 end-0 translate-middle-y"></span>
-                    </a>
-                </div>
-
             </div>
             <!-- sidebar list -->
             <div class="sidebar-list p-3 pt-4">

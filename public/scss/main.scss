@@ -21,6 +21,26 @@ $font: "Franklin Gothic", serif;
   }
 }
 
+.navbar{
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  z-index: 2;
+  a img {
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+  }
+  h1 {
+    color: #000;
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-size: 18px;
+    //line-height: 0px;
+  }
+  .btn-search:hover{
+    border: 1px #201f1f solid;
+  }
+}
+
 .sidebar-list {
   @include scrollbarY
 }
@@ -44,6 +64,10 @@ $font: "Franklin Gothic", serif;
   }
 }
 
+.blend-multiply{
+  mix-blend-mode: multiply !important;
+}
+
 body {
   font-family: sans-serif;
   line-height: 1.8;
@@ -52,7 +76,6 @@ body {
 }
 
 body.dashboard {
-  background-color: #E8ECEF;
   position: fixed;
 }
 
@@ -64,7 +87,7 @@ body.dashboard {
 }
 
 span.ic-dashboard {
-  @include icon("../images/icon/dashboard.png")
+  @include icon("../images/icon/grid.png")
 }
 
 span.ic-perpus {
@@ -76,7 +99,7 @@ span.ic-kuliah {
 }
 
 span.ic-info {
-  @include icon("../images/icon/information.png")
+  @include icon("../images/icon/info.png")
 }
 
 span.ic-himpunan {
