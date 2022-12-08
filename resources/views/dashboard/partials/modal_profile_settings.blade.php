@@ -9,7 +9,7 @@
             </div>
             <div class="modal-body">
                 <div class="container-fluid" >
-                    <div class="rounded rounded-4 bg-accent-2 overflow-hidden">
+                    <div class="rounded rounded-4 bg-grey-2 overflow-hidden">
                         <div class="d-flex justify-content-center pt-4 d-block d-sm-none position-relative">
                             <img src="/images/edna.jpg" alt="profile picture"
                                  class="rounded-circle border border-secondary border-3 img-fluid"
@@ -36,7 +36,7 @@
                                 </button>
                             </div>
                         </div>
-                        <div class="profile-info-detail d-flex bg-accent-2 opacity-75">
+                        <div class="profile-info-detail d-flex bg-grey-1 opacity-75">
                             <div class="px-4 py-2 col-6 border-top border-end border-light border-2">
                                 <span class="text-muted">Email</span>
                                 <p class="m-0 fw-bold">

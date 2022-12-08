@@ -14,7 +14,7 @@ class DosenMatkulFactory extends Factory
     public function definition()
     {
         return [
-            'dosen_id' => mt_rand(1,8),
+            'dosen_id' => mt_rand(1,9),
             'matkul_id' => mt_rand(1,49),
         ];
     }

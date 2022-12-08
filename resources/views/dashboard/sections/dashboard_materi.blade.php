@@ -1,11 +1,17 @@
-@extends('layouts.main')
-
-@section('page')
+{{---------------------------------
+              Materi Section
+    ---------------------------------}}
+<div class="mb-4 ">
     <!--judul, pilihan semester-->
-    <div class="d-sm-flex flex-wrap p-3 px-4">
-        <h3 class="mb-0 mr-3 fw-semibold title-color">Pengolahan Citra Digital</h3>
+    <div class="header materi-header d-sm-flex flex-wrap  p-3 px-4">
+        <button type="button" class="btn bg-transparent mr-3"
+                data-bs-toggle="collapse" data-bs-target="#collapseMateri" aria-expanded="false">
+            <i class="bi bi-caret-down-fill"></i>
+        </button>
+        <h3 class="mb-0 mr-3 fw-semibold text-dark-grey">Materi</h3>
         <!-- semester selector button -->
-        <button class="btn dropdown dropdown-toggle dropdown-center mr-3 ms-auto" type="button" data-bs-toggle="dropdown"
+        <button class="btn dropdown dropdown-toggle dropdown-center mr-3 ms-auto" type="button"
+                data-bs-toggle="dropdown"
                 aria-expanded="false">
             Semester {{request('semester')}}
         </button>
@@ -24,11 +30,13 @@
         </ul>
     </div> <!--header-->
 
-
     <!--Content Materi-->
     <div class="collapse show" id="collapseMateri">
-        <div class="content-materi page px-4 pt-3">
-            @include('partials.materiContent_prt')
+        <div class="content-materi dashboard px-4 pt-3">
+            <div class="row">
+                @include('dashboard.content.content_materi')
+            </div>
         </div>
     </div>
-@endsection
+
+</div><!--Materi section -->

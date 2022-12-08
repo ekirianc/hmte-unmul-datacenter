@@ -6,9 +6,6 @@ namespace Database\Seeders;
 use App\Models\Day;
 use App\Models\Dosen;
 use App\Models\DosenMatkul;
-use App\Models\Jadwal;
-use App\Models\Matkul;
-use App\Models\Semester;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 
@@ -23,10 +20,11 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             MatkulSeeder::class,
+            DoesenSeeder::class,
+            DosenMatkulSeeder::class,
         ]);
 
-        Dosen::factory(8)->create();
-        DosenMatkul::factory(48)->create();
+//        DosenMatkul::factory(48)->create();
 
         User::create([
             'nim' => '1909076028 ',

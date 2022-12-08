@@ -1,0 +1,107 @@
+/***********************************
+************************************
+Specific for jadwal-kuliah part
+************************************
+***********************************/
+
+@use "main" as s;
+
+/*Jadwal kuliah wrapper*/
+.scrolling-wrapper{
+  overflow-x: scroll;
+  &::-webkit-scrollbar-thumb:hover, {
+    background-color: rgb(121, 127, 138) !important;
+  }
+  &::-webkit-scrollbar
+  {
+    height: 12px;
+    background-color: #F5F5F5;
+  }
+
+  &::-webkit-scrollbar-thumb
+  {
+    border-radius: 10px ;
+    background-color: rgb(161, 164, 169) !important;
+  }
+}
+
+.jk-content {
+  max-width: 100%;
+  min-height: 400px;
+  margin: 0;
+  .card:hover > .card-opt-button{
+    display: block !important;
+  }
+  .d-flex, .flex-nowrap{
+    padding: 0;
+  }
+  .flex-nowrap:after{
+    content: "\00a0";
+  }
+  .flex-row{
+    width: 0;
+  }
+  .hari {
+    font-size: 1rem;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    background-color: s.$theme-color-sub-1;
+  }
+
+  .card {
+    min-width: 260px;
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+    transition: 100ms;
+    outline: 1px rgba(199, 202, 206, 0.88) solid;
+  }
+  .card:hover{
+    box-shadow: none;
+    transition: 100ms;
+    outline: none;
+  }
+
+  .card-body a{
+    color: #1B1B1B;
+  }
+
+  .col-3 {
+    margin-right: .6rem;
+    min-width: 260px;
+  }
+
+  .hari:first-child{
+    display: inline-block !important;
+  }
+
+  .col-3>a{
+    color: #201f1f;
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+  }
+
+  .info-badge span {
+    font-size: .9rem;
+    font-weight: 600;
+    color: #191B20;
+  }
+
+  .dosen-matkul {
+    white-space: nowrap;
+  }
+  .dosen-matkul-content{
+    mask-image: linear-gradient(90deg, #000 60%, transparent);
+  }
+  .card-opt-button{
+    z-index: 2;
+    background-color: s.$grey-2;
+  }
+  .card-opt-button:hover{
+    background-color: #b7bdc4;
+  }
+}
+
+.jadwal-kuliah {
+  max-width: 100%;
+  background-color: #F5F7FA;
+}

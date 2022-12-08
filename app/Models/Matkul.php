@@ -2,13 +2,16 @@
 
 namespace App\Models;
 
+use Cviebrock\EloquentSluggable\Services\SlugService;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasMany;
+use Cviebrock\EloquentSluggable\Sluggable;
+use Illuminate\http\Request;
 
 class Matkul extends Model
 {
-    use HasFactory;
+    use HasFactory, Sluggable;
+
     protected $guarded = [
         'id',
     ];
@@ -31,4 +34,19 @@ class Matkul extends Model
         return $this->belongsToMany(Dosen::class);
     }
 
+
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
+
+    /*https://github.com/cviebrock/eloquent-sluggable*/
+    public function sluggable(): array
+    {
+        return [
+            'slug' => [
+                'source' => 'name'
+            ]
+        ];
+    }
 }

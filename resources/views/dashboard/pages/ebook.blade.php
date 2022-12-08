@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('dashboard.layouts.main')
 
 @section('page')
     <!--judul-->
@@ -13,7 +13,7 @@
     <!--ebook content-->
     <div class="collapse show" id="collapseEbook">
         <div class="content-ebook  p-3 px-4 ">
-            @include('partials.ebookContent_prt')
+            @include('dashboard.content.content_ebook')
         </div> <!--Content ebook-->
     </div>
 

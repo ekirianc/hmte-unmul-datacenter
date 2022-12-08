@@ -23,7 +23,8 @@
                        data-bs-toggle="collapse">
                         <span class="ic-perpus mr-3"></span> Perpustakaan</a>
                     <ul class="collapse list-unstyled" id="perpustakaanSubmenu">
-                        <li class="{{ Request::path() === 'materi' ? 'active':'' }}"><a href="/materi">Materi Pembelajaran</a></li>
+                        <li class="{{ Request::path() === 'materi' ? 'active':'' }}"><a href="/materi">Materi
+                                Pembelajaran</a></li>
                         <li class="{{ Request::path() === 'ebook' ? 'active':'' }}"><a href="/ebook">Ebook</a></li>
                         <li class=""><a href="#">Aplikasi</a></li>
                     </ul>
@@ -35,8 +36,11 @@
                         <span class="ic-kuliah mr-3"></span> Kuliah
                     </a>
                     <ul class="collapse list-unstyled" id="kuliahSubmenu">
-                        <li class="{{ Request::path() === 'kurikulum' ? 'active':'' }}"><a href="/kurikulum">Kurikulum</a></li>
-                        <li class="{{ Request::path() === 'jadwal' ? 'active':'' }}"><a href="/jadwal">Jadwal Kuliah</a></li>
+                        <li class="{{ Request::path() === 'jadwal' ? 'active':'' }}"><a href="/jadwal">Jadwal Kuliah</a>
+                        </li>
+                        <li class="{{ Request::is('kurikulum*')  ? 'active':'' }}"><a
+                                    href="/kurikulum">Kurikulum</a></li>
+                        <li><a href="#">Praktikum</a></li>
                     </ul>
                 </li>
                 <!-- Informasi -->
@@ -46,8 +50,10 @@
                         <span class="ic-info mr-3"></span> Informasi
                     </a>
                     <ul class="collapse list-unstyled" id="infoSubmenu">
+                        <li><a href="#">Jadwal Seminar</a></li>
+                        <li><a href="#">Kalender Akademik</a></li>
                         <li><a href="#">Mahasiswa</a></li>
-                        <li><a href="#">Dosen</a></li>
+                        <li class="{{ Request::path() === 'dosen' ? 'active':'' }}"><a href="/dosen">Dosen</a></li>
                         <li><a href="#">KKN</a></li>
                         <li><a href="#">PKL</a></li>
                         <li><a href="#">Skripsi</a></li>
@@ -71,4 +77,4 @@
     </div>
 </nav>
 
-@include('partials.modal_profile_settings')
+@include('dashboard.partials.modal_profile_settings')

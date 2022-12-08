@@ -1,11 +1,12 @@
-@extends('layouts.main')
+@extends('dashboard.layouts.main')
 
 @section('page')
-    <h1>{{$title}}</h1>
-    <p>NIP: {{$nip}}</p>
-    <p>bidang: {{$bidang}}</p>
+    <div class="px-3 bg-white rounded">
+        <h1>{{$title}}</h1>
+        <p>NIP: {{$nip}}</p>
+        <p>bidang: {{$bidang}}</p>
 
-    <div class="p-3 bg-white rounded">
+
         <h2>mata kuliah yang diampu (di teknik elektro)</h2>
         <table class="table table-hover table-bordered table-responsive">
             <thead>

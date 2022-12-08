@@ -1,0 +1,27 @@
+@use "main" as s;
+
+$body-dark: #111111 ;
+$navbar-dark: #1B1B1B ;
+$card-dark: #3A3A3A ;
+$text-onDark: #F3F3F3;
+
+body.dark-mode{
+  background-color: $body-dark;
+  .navbar, #sidebar{
+    background-color: $navbar-dark;
+  }
+  .navbar *, .card a, .card h5, .card, .header h3, #sidebar ul li *{
+    color: $text-onDark !important;
+  }
+  .card, .jadwal-kuliah .header, #sidebar li.active a{
+    background-color: $card-dark;
+  }
+  .jadwal-kuliah{
+    background-color: #212020;
+  }
+  .jk-content .card{
+    box-shadow: rgb(25, 26, 28) 3px 3px 6px 0px inset, rgba(103,96,96,0.5) -3px -3px 6px 1px inset;
+    border: none !important;
+  }
+
+}
