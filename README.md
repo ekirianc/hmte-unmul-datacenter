@@ -1,6 +1,9 @@
 # hmte-unmul-datacenter
 Pusat informasi mengenai Himpunan Mahasiswa Teknik Elekto Universitas Mulawarman dan informasi seputar perkuliahan
 
+untuk yang ini tidak lagi dikembangkan. 
+untuk versi barunya masih dalam taahap perencanaan
+
 # Rancangan Awal
 ### landing page
 ![alt text](https://i.postimg.cc/fzwV535g/Beranda-cr.png)
