@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    h2{
+        @apply text-3xl font-bold
+    }
+    h3{
+        @apply text-xl font-bold
+    }
+    body{
+        background-color: #f6f7fb;
+    }
+
+}
+
+@layer utilities{
+    .shadow-inner{
+        box-shadow: inset -4px 4px 8px rgba(232, 232, 232, 0.2), inset 4px -4px 8px rgba(232, 232, 232, 0.2), inset -4px -4px 8px rgba(255, 255, 255, 0.9), inset 4px 4px 10px rgba(232, 232, 232, 0.9);
+    }
+    .shadow-card{
+        box-shadow: 0px 0px 6px rgba(90, 143, 220, 0.1), 0px 2px 4px rgba(18, 54, 105, 0.04);
+    }
+
+    #tabs .active span[class*="ic-"]{ @apply hidden}
+    #tabs .active span[class*="-fill"]{ @apply  bg-primary/20 text-gray-800}
+    #tabs .active span[class*="-fill"]{ display: initial  }
+    #tabs .active span.tab{ @apply font-bold text-primary  }
+}
+
+.logo{
+    content: url('img/Datacenter Logo.svg');
+}
+
+/* change active icon https://forum.framework7.io/t/how-to-change-icon-on-active-state/9070  */
+
