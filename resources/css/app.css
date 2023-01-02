@@ -20,12 +20,11 @@
         box-shadow: inset -4px 4px 8px rgba(232, 232, 232, 0.2), inset 4px -4px 8px rgba(232, 232, 232, 0.2), inset -4px -4px 8px rgba(255, 255, 255, 0.9), inset 4px 4px 10px rgba(232, 232, 232, 0.9);
     }
     .shadow-card{
-        box-shadow: 0px 0px 6px rgba(90, 143, 220, 0.1), 0px 2px 4px rgba(18, 54, 105, 0.04);
+        box-shadow: 0 0 6px rgba(90, 143, 220, 0.1), 0 2px 4px rgba(18, 54, 105, 0.04);
     }
 
     #tabs .active span[class*="ic-"]{ @apply hidden}
-    #tabs .active span[class*="-fill"]{ @apply  bg-primary/20 text-gray-800}
-    #tabs .active span[class*="-fill"]{ display: initial  }
+    #tabs .active span[class*="-fill"]{ @apply text-2xl rounded-b-2xl px-3 pb-2 pt-1 inline bg-primary text-white}
     #tabs .active span.tab{ @apply font-bold text-primary  }
 }
 
