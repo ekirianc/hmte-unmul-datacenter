@@ -16,16 +16,22 @@ import 'animate.css';
         </main>
     </Transition>
 
-
     <BottomNavbar/>
 </template>
 
 <style>
-.page-enter-active, .nested-leave-active {
+.page-enter-active{
     transition: all 0.2s ease-in-out;
 }
 
 .page-enter-from,
+.page-leave-active{
+    transition: all .1s;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+
 .page-leave-to {
     transform: translateY(20px);
     opacity: 0;
