@@ -24,7 +24,7 @@
     }
 
     #tabs .active span[class*="ic-"]{ @apply hidden}
-    #tabs .active span[class*="-fill"]{ @apply text-2xl rounded-b-2xl px-3 pb-2 pt-1 inline bg-primary text-white}
+    #tabs .active span[class*="-fill"]{ @apply text-2xl rounded-2xl px-4 py-1 inline bg-primary/20 text-gray-700 }
     #tabs .active span.tab{ @apply font-bold text-primary  }
 }
 
