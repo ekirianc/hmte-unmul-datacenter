@@ -1,8 +1,9 @@
+> not continued
+
 # hmte-unmul-datacenter
 Pusat informasi mengenai Himpunan Mahasiswa Teknik Elekto Universitas Mulawarman dan informasi seputar perkuliahan
 
-untuk yang ini tidak lagi dikembangkan. 
-untuk versi barunya masih dalam taahap perencanaan
+menggunakan Laravel dan Tailwind CSS
 
 # Rancangan Awal
 ### landing page
