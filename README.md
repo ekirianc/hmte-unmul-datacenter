@@ -1,3 +1,4 @@
+> not continued
 
 <h1 align="center"> HMTE Datacenter </h1>
 <p align="center">
@@ -7,6 +8,8 @@
 ## Tentang HMTE Datacenter
 
 Aplikasi web ini bertujuan untuk menampung semua informasi mengenai perkuliahan dan organisasi dalam satu tempat
+
+Menggunakan Laravel, Vue, Vite, Inertia dan Tailwind CSS
 
 Fitur yang direncanakan akan ada dalam aplikasi ini diantaranya:
 - Jadwal Seminar (Proposal, Hasil dan PKL)
