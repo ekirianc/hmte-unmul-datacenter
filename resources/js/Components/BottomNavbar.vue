@@ -11,7 +11,7 @@
                     <span class="ic-home-1 text-2xl rounded-full px-4 py-1"></span>
                     <span class="ic-home-fill hidden"></span> <!--on active-->
                     <!--label-->
-                    <span class="tab tab-home hover:text-primary block text-xs ">Home {{nilai}}</span>
+                    <span class="tab tab-home hover:text-primary block text-xs ">Home</span>
                 </InertiaLink>
                 <InertiaLink href="/jadwal" :class="{ 'active': $page.url.startsWith('/jadwal') }"
                              class="w-full hover:text-primary  justify-center inline-block text-center pb-1 pt-2">
