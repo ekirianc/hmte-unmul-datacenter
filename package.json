@@ -29,6 +29,7 @@
         "@vueuse/core": "^9.6.0",
         "@webzlodimir/vue-bottom-sheet": "^2.0.2",
         "animate.css": "^4.1.1",
+        "tailwind-scrollbar-hide": "^1.1.7",
         "tsparticles": "^2.6.0",
         "vue3-particles": "^2.6.0"
     }

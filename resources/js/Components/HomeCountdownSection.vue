@@ -67,7 +67,7 @@ function capitalized(name) {
             </a>
             <!--content-->
             <div class="h-[8.5rem] overflow-x-auto overflow-y-hidden  w-full">
-                <Splide  :options="{ rewind: true, autoplay:true}">
+                <Splide :options="{ rewind: true, autoplay:true}">
                     <SplideSlide v-for="msg in notifcardOrganisasi(notifcard.organisasi)">
                         <a href="#" class="flex flex-col justify-between p-5 ml-1 min-h-[8.5rem] rounded-2xl bg-white border">
                             <div class="grid">

@@ -1,5 +1,6 @@
 <template>
     <div class="text-center">Ini Lainnya</div>
+
 </template>
 
 <script>

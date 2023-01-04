@@ -11,7 +11,7 @@ import 'animate.css';
     <!-- https://postsrc.com/code-snippets/how-to-add-page-transition-in-inertia-js -->
     <!-- https://vuejs.org/guide/built-ins/transition.html#css-based-transitions -->
     <Transition name="page" mode="out-in">
-        <main class="px-4" :key="$page.url" >
+        <main :key="$page.url" >
             <slot />
         </main>
     </Transition>

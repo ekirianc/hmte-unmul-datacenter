@@ -1,8 +1,8 @@
 
 <template>
     <!--top navbar-->
-    <div class="bg-white px-4 sm:px-4 py-3 dark:bg-gray-900 w-full fixed z-10 transition "
-         :class="{'shadow-md': scrolled}"
+    <div class="bg-white px-4  sm:px-4 py-3 dark:bg-gray-900 w-full fixed z-10 transition"
+         :class="[{'shadow-md': scrolled}, {'-translate-y-full': !showNavbar}]"
     >
         <div class="flex flex-wrap items-center justify-between mx-auto">
             <a href="/" class="flex items-center">
@@ -20,7 +20,7 @@
         </div>
     </div>
 
-    <div class="h-13 mb-4"/> <!--sesuai tinggi navbar-->
+    <div class="h-10 mb-4"/> <!--sesuai tinggi navbar-->
 </template>
 
 <script>
@@ -41,23 +41,23 @@ export default {
             this.scrolled = window.scrollY > 0;
         },
         // Show/Hide
-        // onScroll () {
-        //     // Get the current scroll position
-        //     const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop
-        //     // Because of momentum scrolling on mobiles, we shouldn't continue if it is less than zero
-        //     if (currentScrollPosition < 0) {
-        //         return
-        //     }
-        //     // Stop executing this function if the difference between
-        //     // current scroll position and last scroll position is less than some offset
-        //     if (Math.abs(currentScrollPosition - this.lastScrollPosition) < 60) {
-        //         return
-        //     }
-        //     // Here we determine whether we need to show or hide the navbar
-        //     this.showNavbar = currentScrollPosition < this.lastScrollPosition
-        //     // Set the current scroll position as the last scroll position
-        //     this.lastScrollPosition = currentScrollPosition
-        // }
+        onScroll () {
+            // Get the current scroll position
+            const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop
+            // Because of momentum scrolling on mobiles, we shouldn't continue if it is less than zero
+            if (currentScrollPosition < 0) {
+                return
+            }
+            // Stop executing this function if the difference between
+            // current scroll position and last scroll position is less than some offset
+            if (Math.abs(currentScrollPosition - this.lastScrollPosition) < 60) {
+                return
+            }
+            // Here we determine whether we need to show or hide the navbar
+            this.showNavbar = currentScrollPosition < this.lastScrollPosition
+            // Set the current scroll position as the last scroll position
+            this.lastScrollPosition = currentScrollPosition
+        }
     },
     //shadow
     created () {
@@ -68,12 +68,12 @@ export default {
     },
 
     // Show/Hide
-    // mounted () {
-    //     window.addEventListener('scroll', this.onScroll)
-    // },
-    // beforeDestroy () {
-    //     window.removeEventListener('scroll', this.onScroll)
-    // },
+    mounted () {
+        window.addEventListener('scroll', this.onScroll)
+    },
+    beforeDestroy () {
+        window.removeEventListener('scroll', this.onScroll)
+    },
 
 }
 </script>

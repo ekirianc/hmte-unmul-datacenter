@@ -25,7 +25,7 @@ Route::get('/', function () {
 });
 
 Route::get('/jadwal', function () {
-    return Inertia::render('Jadwal/Kuliah');
+    return Inertia::render('Jadwal/Index');
 });
 
 Route::get('/perpus', function () {
@@ -51,6 +51,16 @@ Route::get('/tailwind', function (){
 // test particle js
 Route::get('/particle', function (){
     return Inertia::render('Dev/Particle');
+});
+
+// test bottom navbar
+Route::get('/btmnav', function (){
+    return Inertia::render('Dev/BtmNav');
+});
+
+// test tabs
+Route::get('/tabs', function (){
+    return Inertia::render('Dev/Tabs/Index');
 });
 
 // test crud

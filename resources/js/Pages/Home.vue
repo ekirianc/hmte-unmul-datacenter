@@ -1,11 +1,5 @@
 <script setup>
 import { ref } from "vue";
-import { Head } from '@inertiajs/inertia-vue3'
-
-// Others Components
-import { VueBottomSheet } from "@webzlodimir/vue-bottom-sheet";
-import  "@webzlodimir/vue-bottom-sheet/dist/style.css";
-import '@splidejs/vue-splide/css';
 
 // Components
 import CountdownSection from "@/Components/HomeCountdownSection.vue";
@@ -21,11 +15,12 @@ const messagesNotif = ref([
     // { matkul: 'Pemrograman Website' },
 ])
 
-
 </script>
 <template>
-    <Head title="Home"/>
 
+<InertiaHead title="Home"/>
+
+<div class="px-4 pt-4">
     <!--Dashboard Content-->
     <h2 class="text-primary">Home</h2>
 
@@ -73,20 +68,19 @@ const messagesNotif = ref([
                 <span class="ic-more text-gray-700 text-xl mx-3 "></span>
             </div>
         </a>
-
     </section> <!--Jadwal Kuliah-->
+</div>
 
-    <!--Bottom Sheet (dropdown mobile) [jadwal section -> pilih semester]-->
-    <!-- https://github.com/vaban-ru/vue-bottom-sheet -->
-    <vue-bottom-sheet ref="semesterPick">
-            <ul class="last:mb-10">
-                <li class="p-4 border-b active:bg-gray-100 transition"><a href="#">Semester 2</a></li>
-                <li class="p-4 border-b active:bg-gray-100 transition"><a href="#">Semester 4</a></li>
-                <li class="p-4 border-b active:bg-gray-100 transition"><a href="#">Semester 6</a></li>
-            </ul>
-            <p class="text-center text-gray-400 p-8">semester genap 2023</p>
-    </vue-bottom-sheet>
-
+<!--Bottom Sheet (dropdown mobile) [jadwal section -> pilih semester]-->
+<!-- https://github.com/vaban-ru/vue-bottom-sheet -->
+<vue-bottom-sheet ref="semesterPick">
+        <ul class="last:mb-10">
+            <li class="p-4 border-b active:bg-gray-100 transition"><a href="#">Semester 2</a></li>
+            <li class="p-4 border-b active:bg-gray-100 transition"><a href="#">Semester 4</a></li>
+            <li class="p-4 border-b active:bg-gray-100 transition"><a href="#">Semester 6</a></li>
+        </ul>
+        <p class="text-center text-gray-400 p-8">semester genap 2023</p>
+</vue-bottom-sheet>
 
 </template>
 
@@ -102,3 +96,5 @@ export default {
 }
 
 </script>
+
+
