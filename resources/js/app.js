@@ -5,9 +5,12 @@ import { createApp, h } from 'vue';
 import { createInertiaApp, Head, Link } from '@inertiajs/inertia-vue3';
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 // import { ZiggyVue } from '../../vendor/tightenco/ziggy/dist/vue.m';
+
 import Particles from "vue3-particles";
 import VueSplide from '@splidejs/vue-splide';
-
+import { VueBottomSheet } from "@webzlodimir/vue-bottom-sheet";
+import '@splidejs/vue-splide/css';
+import  "@webzlodimir/vue-bottom-sheet/dist/style.css";
 
 const appName = window.document.getElementsByTagName('title')[0]?.innerText || 'HMTE Datacenter';
 
@@ -21,6 +24,7 @@ createInertiaApp({
             .use(Particles)
             .use(VueSplide)
             // .use(ZiggyVue, Ziggy)
+            .component('VueBottomSheet',VueBottomSheet)
             .component('InertiaHead', Head)
             .component('InertiaLink', Link)
             .mount(el);
